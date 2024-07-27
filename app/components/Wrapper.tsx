@@ -11,7 +11,7 @@ const Wrapper = ({ children }: { children: ReactNode }) => {
           ["/sign-up", "/sign-in"].includes(pathname)
             ? "max-w-[600px]"
             : "max-w-[800px]"
-        } mx-auto bg-white flex flex-col justify-center items-center`}
+        } mx-auto bg-white `}
       >
         {children}
       </section>

@@ -4,7 +4,7 @@ import { SubmitHandler, useForm } from "react-hook-form";
 
 export default function SignInPage() {
   return (
-    <div className=" h-full max-w-[300px] mx-auto flex flex-col items-center justify-center">
+    <div className=" h-full max-w-[300px] 0 mx-auto flex flex-col items-center justify-center">
       <div className="relative w-3/4  h-40 ">
         <Image
           src="sphere.svg"

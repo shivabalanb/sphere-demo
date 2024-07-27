@@ -25,7 +25,7 @@ export default async function Home() {
   }
 
   return (
-    <div className="">
+    <div className="flex flex-col justify-center items-center h-full">
       <p>Welcome {formatName(session?.user?.name!)}</p>
       <Button />
     </div>
