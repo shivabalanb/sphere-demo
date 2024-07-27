@@ -1,7 +1,6 @@
 import { db } from "@/app/lib/db";
+import { userSchema } from "@/app/types/types";
 import { NextRequest, NextResponse } from "next/server";
-import { userSchema } from "../user/route";
-
 export async function GET(request: NextRequest) {
   try {
     const searchParams = request.nextUrl.searchParams;

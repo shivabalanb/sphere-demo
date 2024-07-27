@@ -3,23 +3,7 @@ import { NextResponse } from "next/server";
 import { hash } from "bcrypt";
 import * as z from "zod";
 
-export const userSchema = z.object({
-  name: z.string().min(1, { message: "Name required" }),
-  email: z.string().email({ message: "Invalid email" }),
-  password: z
-    .string()
-    .min(8, { message: "Password must be at least 8 characters long" })
-    .regex(/[A-Z]/, {
-      message: "Password must contain at least one uppercase letter",
-    })
-    .regex(/[a-z]/, {
-      message: "Password must contain at least one lowercase letter",
-    })
-    .regex(/[0-9]/, { message: "Password must contain at least one number" })
-    .regex(/[\W_]/, {
-      message: "Password must contain at least one special character",
-    }),
-});
+import { userSchema } from "@/app/types/types";
 
 export async function POST(request: Request) {
   try {
@@ -58,7 +42,6 @@ export async function POST(request: Request) {
       },
       { status: 201 }
     );
-
   } catch (error) {
     return NextResponse.json(
       { message: "Something went wrong" },
